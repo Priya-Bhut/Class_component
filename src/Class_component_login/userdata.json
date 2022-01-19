@@ -1,0 +1,31 @@
+[
+     {
+            "email":"priyabhut@gmail.com",
+            "password":"12345",
+            "username":"priya bhut"
+          },
+
+          {
+            "email":"khushbu@gmail.com",
+            "password":"123456",
+            "username":"Khushbu Shobhashna"
+          },
+
+          {
+            "email":"surbhi@gmail.com",
+            "password":"1234567",
+            "username":"Surbhi Bhardva"
+          },
+
+           {
+            "email":"simple@gmail.com",
+            "password":"12345678",
+            "username":"Simple Singh"
+          },
+
+           {
+            "email":"dhruvi@gmail.com",
+            "password":"12345679",
+            "username":"9Dhruvi Chavda"
+          }
+]
