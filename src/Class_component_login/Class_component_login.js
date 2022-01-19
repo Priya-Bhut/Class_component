@@ -60,7 +60,7 @@ class Class_component_login extends Component {
             <input
               type="password"
               id="password"
-              placeholder="Enter Password"
+              placeholder="Enter your Password"
               onChange={(e) => this.setState({ password: e.target.value })}
               value={this.state.password}
             />
