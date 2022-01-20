@@ -9,16 +9,16 @@ class Class_component_login extends Component {
     this.state = {
       //email: "",
       password: "",
-      username:'',
+      username: "",
       loggedInUser: null,
       errorMsg: "",
     };
   }
-  myfunction = () => {
+  checkData = () => {
     // const { email, password } = this.state;
     const { username, password } = this.state;
     // const data = userdata.find((e) => e.email === email);
-  const data = userdata.find((e) => e.username === username);
+    const data = userdata.find((e) => e.username === username);
     if (data) {
       if (data.password === password) {
         this.setState({ errorMsg: "", loggedInUser: data });
@@ -30,6 +30,7 @@ class Class_component_login extends Component {
     }
   };
   render() {
+    const { username, password, errorMsg, loggedInUser } = this.state;
     return (
       <div>
         <form id="main">
@@ -50,11 +51,9 @@ class Class_component_login extends Component {
               id="username"
               placeholder="Enter Username"
               onChange={(e) => this.setState({ username: e.target.value })}
-              value={this.state.username}
+              value={username}
             />
-          </div> 
-
-
+          </div>
           <div className="input-parent">
             <label htmlFor="password">Password</label>
             <input
@@ -62,17 +61,17 @@ class Class_component_login extends Component {
               id="password"
               placeholder="Enter your Password"
               onChange={(e) => this.setState({ password: e.target.value })}
-              value={this.state.password}
+              value={password}
             />
           </div>
-          <p id="incorrect">{this.state.errorMsg}</p>
-          <button type="button" onClick={this.myfunction}>
+          <p id="incorrect">{errorMsg}</p>
+          <button type="button" onClick={this.checkData}>
             Login
           </button>
         </form>
 
-        {this.state.loggedInUser && !this.state.errorMsg && (
-          <Function loggedInUser={this.state.loggedInUser}></Function>
+        {loggedInUser && !errorMsg && (
+          <Function loggedInUser={loggedInUser}></Function>
         )}
       </div>
     );
