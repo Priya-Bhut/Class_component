@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
              <Class_component_login  />
+             <functional_component_login />
       </header>
     </div>
   );
